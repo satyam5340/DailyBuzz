@@ -2,7 +2,7 @@ const Post = require("../model/Post");
 const path = require('path')
 // create new post
 module.exports.createPost = (req, res, next) => {
-  
+  console.log('hello')
   Post.uploadedAvatar(req,res,function(err){
     
     console.log(req.file)
