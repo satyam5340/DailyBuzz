@@ -19,7 +19,7 @@ class PostDetails extends React.Component{
         console.log(this.state.liked)
         if (!this.state.liked){
             
-            await axios.post('http://localhost:9000/api/like',{id:this.state.id});
+            await axios.post('http://54.210.86.248:9000/api/like',{id:this.state.id});
             this.setState({
                 liked:true,
                 likes:this.state.likes+1
