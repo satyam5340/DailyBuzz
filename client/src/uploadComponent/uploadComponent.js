@@ -34,7 +34,7 @@ class uploadComponent extends React.Component {
 			formData.append("location", this.state.location);
 			formData.append("description", this.state.description);
 			formData.append("image", this.fileInput.current.files[0]);
-			await fetch("http://localhost:9000/posts", {
+			await fetch("http://54.210.86.248:9000/posts", {
 				method: "POST",
 				body: formData,
 			})
@@ -49,87 +49,81 @@ class uploadComponent extends React.Component {
 	}
 	render() {
 		return (
-			
-				
-				<div className="box">
-					<form onSubmit={this.handleSubmit}>
-						<div className='line line1'> 
-							<input
-								type="text"
-								disabled="true"
-								className="file"
-								placeholder=" No file chosen"
-								value={this.state.fileName}
-								
-							/>
-							<input
-								type="file"
-								ref={this.fileInput}
-								accept="image/*"
-								hidden
-								name="file"
-								className="file-btn"
-								onChange={this.handleChange.bind(this)}
-							/>
-							<button
-								className="browse"
-								onClick={this.handleClick.bind(this)}
-								className="browse"
-							>
-								Browse
-							</button>
-						</div>
-						
-						
-						<div className='line line2'>
-							<input
-								type="text"
-								placeholder=" Author"
-								className="author"
-								name="author"
-								value={this.state.author}
-								onChange={this.handleChange.bind(this)}
-							/>
+			<div className="box">
+				<form onSubmit={this.handleSubmit}>
+					<div className="line line1">
+						<input
+							type="text"
+							disabled="true"
+							className="file"
+							placeholder=" No file chosen"
+							value={this.state.fileName}
+						/>
+						<input
+							type="file"
+							ref={this.fileInput}
+							accept="image/*"
+							hidden
+							name="file"
+							className="file-btn"
+							onChange={this.handleChange.bind(this)}
+						/>
+						<button
+							className="browse"
+							onClick={this.handleClick.bind(this)}
+							className="browse"
+						>
+							Browse
+						</button>
+					</div>
 
-							<input
-								type="text"
-								placeholder=" Location"
-								className="location"
-								name="location"
-								value={this.state.location}
-								onChange={this.handleChange.bind(this)}
-							/>
-						</div>
-						
-						<div className='line line3'>
-							<input
-								type="text"
-								placeholder=" Description"
-								name="description"
-								className="description"
-								value={this.state.description}
-								onChange={this.handleChange.bind(this)}
-								className="description1"
-							/>
-						</div>
-						
-						<div className='line line4'>
-							<input
-								type="submit"
-								value="Post"
-								className="post"
-								disabled={
-									!this.state.author ||
-									!this.state.location ||
-									!this.state.description ||
-									!this.state.fileName
-								}
-							/>
-						</div>
-						
-					</form>
-				</div>
-			
+					<div className="line line2">
+						<input
+							type="text"
+							placeholder=" Author"
+							className="author"
+							name="author"
+							value={this.state.author}
+							onChange={this.handleChange.bind(this)}
+						/>
+
+						<input
+							type="text"
+							placeholder=" Location"
+							className="location"
+							name="location"
+							value={this.state.location}
+							onChange={this.handleChange.bind(this)}
+						/>
+					</div>
+
+					<div className="line line3">
+						<input
+							type="text"
+							placeholder=" Description"
+							name="description"
+							className="description"
+							value={this.state.description}
+							onChange={this.handleChange.bind(this)}
+							className="description1"
+						/>
+					</div>
+
+					<div className="line line4">
+						<input
+							type="submit"
+							value="Post"
+							className="post"
+							disabled={
+								!this.state.author ||
+								!this.state.location ||
+								!this.state.description ||
+								!this.state.fileName
+							}
+						/>
+					</div>
+				</form>
+			</div>
 		);
 	}
 }
