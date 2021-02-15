@@ -54,9 +54,12 @@ class uploadComponent extends React.Component {
 			const formData = new FormData();
 			formData.append("owner", this.state.author);
 			formData.append("location", this.state.location);
+
 			formData.append("caption", this.state.description);
 			formData.append("content", this.fileInput.current.files[0]);
 			fetch("http://localhost:9000/api/post", {
+
+			
 				method: "POST",
 				body: formData,
 			})
@@ -77,6 +80,7 @@ class uploadComponent extends React.Component {
 		this.checkFilled();
 		console.log(this.state.allFilled)
 		return (
+
 			
 				
 					<div className="box">
@@ -170,6 +174,7 @@ class uploadComponent extends React.Component {
 				
 				
 			
+
 		);
 	}
 }

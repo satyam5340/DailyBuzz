@@ -1,3 +1,4 @@
+
 import React from 'react';
 import heart from '../../img/heart.svg';
 import share from '../../img/share.png';
@@ -51,7 +52,9 @@ class PostDetails extends React.Component{
         </div>
     }
 
-}
 
+
+
+	
 
 export default PostDetails;

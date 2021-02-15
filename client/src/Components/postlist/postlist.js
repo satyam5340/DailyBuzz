@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Post from '../HomePage/Post';
 import Header from '../../header';
@@ -51,6 +52,4 @@ class PostList extends React.Component{
         </div>
         
     }
-
-}
 export default PostList
