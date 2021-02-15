@@ -52,4 +52,5 @@ class PostList extends React.Component{
         </div>
         
     }
-export default PostList
+}
+export default PostList;

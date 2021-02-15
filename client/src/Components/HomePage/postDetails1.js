@@ -53,7 +53,7 @@ class PostDetails extends React.Component{
     }
 
 
-
+}
 
 	
 
