@@ -11,4 +11,4 @@ function ImageComponent(props) {
   );
 }
 
-// export default ImageComponent;
+export default ImageComponent;
