@@ -39,14 +39,14 @@ module.exports.createPost = (req, res, next) => {
             });
         })
   })
-  // const post = new Post({
-  //   author: req.body.author,
-  //   location: req.body.location,
-  //   imageUrl: req.body.imageUrl,
-  //   // createdAt: req.body.createdAt,
-  //   numberOfLikes: req.body.numberOfLikes,
-  //   description: req.body.description,
-  // });
+  const post = new Post({
+    author: req.body.author,
+    location: req.body.location,
+    imageUrl: req.body.imageUrl,
+    // createdAt: req.body.createdAt,
+    numberOfLikes: req.body.numberOfLikes,
+    description: req.body.description,
+  });
   // post
   //   .save()
   //   .then(() => {
