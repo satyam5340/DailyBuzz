@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/instaClone_developement_new')
+mongoose.connect('mongodb://localhost/instaClone_developement_new',{ useNewUrlParser: true , useUnifiedTopology: true })
 
 const db = mongoose.connection
 

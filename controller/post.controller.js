@@ -68,9 +68,9 @@ module.exports.getPosts = (req, res, next) => {
   .exec(function(err,data){
     if (err){
       console.log(err)
-      res.json(500,{'message':'error'})
+      res.status(500).json({'message':'error'})
     }
-    res.json(200,data)
+    res.status(200).json(data)
   })
 };
 
@@ -97,7 +97,7 @@ module.exports.addLike = async function(req,res){
       console.log(doc)
       doc.likes += 1
       doc.save()
-      res.json({
+      res.status(200).json({
           message:'Sucessfull'
       })
       
