@@ -18,12 +18,12 @@ class PostDetails extends React.Component {
 	likesHandler = async () => {
 		console.log(this.state.liked);
 		if (!this.state.liked) {
-			await axios.post("http://18.118.13.230:9000/api/like", {
-				id: this.state.id,
-			});
 			this.setState({
 				liked: true,
 				likes: this.state.likes + 1,
+			});
+			await axios.post("http://18.118.13.230:9000/api/like", {
+				id: this.state.id,
 			});
 		}
 	};
