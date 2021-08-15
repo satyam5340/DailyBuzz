@@ -56,7 +56,7 @@ class uploadComponent extends React.Component {
 
 			formData.append("caption", this.state.description);
 			formData.append("content", this.fileInput.current.files[0]);
-			fetch("http://localhost:9000/api/post", {
+			fetch("http://18.118.13.230:9000/api/post", {
 				method: "POST",
 				body: formData,
 			})

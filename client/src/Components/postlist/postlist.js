@@ -12,7 +12,7 @@ class PostList extends React.Component {
 		};
 	}
 	componentDidMount() {
-		fetch("http://localhost:9000/api/post")
+		fetch("http://18.118.13.230:9000/api/post")
 			.then((res) => {
 				return res.json();
 			})
